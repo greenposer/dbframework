@@ -1,0 +1,88 @@
+  <DatabaseXMLBean>
+    <tables>
+      <table name="application">
+        <columns>
+          <column name="application_id"/>
+          <column name="entrant_id"/>
+          <column name="proposition_id"/>
+          <column name="total_points"/>
+          <column name="original"/>
+          <column name="position"/>
+          <column name="updated"/>
+          <column name="wave_fired"/>
+          <column name="position_wave1"/>
+          <column name="position_wave2"/>
+          <column name="position_wave3"/>
+          <column name="ekz_points"/>
+          <column name="olymp_points"/>
+          <column name="podkurs_points"/>
+          <column name="pozakonk"/>
+          <column name="pozacherg"/>
+          <column name="zno_points"/>
+          <column name="rekomend"/>
+          <column name="present"/>
+          <column name="zarax"/>
+        </columns>
+      </table>
+      <table name="branch">
+        <columns>
+          <column name="branch_id"/>
+          <column name="name"/>
+        </columns>
+      </table>
+      <table name="department">
+        <columns>
+          <column name="department_id"/>
+          <column name="name"/>
+          <column name="university_id"/>
+        </columns>
+      </table>
+      <table name="direction">
+        <columns>
+          <column name="direction_id"/>
+          <column name="name"/>
+          <column name="branch_id" indexTableName="branch" indexColumnName="name"/>
+          <column name="type"/>
+        </columns>
+      </table>
+      <table name="entrant">
+        <columns>
+          <column name="entrant_id"/>
+          <column name="fio"/>
+          <column name="atestat_points"/>
+          <column name="updated"/>
+        </columns>
+      </table>
+      <table name="proposition">
+        <columns>
+          <column name="proposition_id"/>
+          <column name="department_id"/>
+          <column name="okr"/>
+          <column name="direction_id" indexTableName="direction" indexColumnName="name"/>
+          <column name="license"/>
+          <column name="zakaz"/>
+          <column name="url"/>
+          <column name="sub_direction_id"/>
+        </columns>
+      </table>
+      <table name="university">
+        <columns>
+          <column name="university_id"/>
+          <column name="name"/>
+          <column name="url"/>
+          <column name="region_id"/>
+          <column name="address"/>
+          <column name="site"/>
+          <column name="short_name"/>
+        </columns>
+      </table>
+      <table name="user">
+        <columns>
+          <column name="user_id"/>
+          <column name="login"/>
+          <column name="password"/>
+          <column name="role"/>
+        </columns>
+      </table>
+    </tables>
+  </DatabaseXMLBean>
