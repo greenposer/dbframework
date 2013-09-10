@@ -1,0 +1,157 @@
+  <DatabaseXMLBean>
+    <tables>
+      <table name="actor">
+        <columns>
+          <column name="actor_id" primaryKey="true"/>
+          <column name="first_name"/>
+          <column name="last_name"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="address">
+        <columns>
+          <column name="address_id" primaryKey="true"/>
+          <column name="address"/>
+          <column name="address2"/>
+          <column name="district"/>
+          <column name="city_id"/>
+          <column name="postal_code"/>
+          <column name="phone"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="category">
+        <columns>
+          <column name="category_id" primaryKey="true"/>
+          <column name="name"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="city">
+        <columns>
+          <column name="city_id" primaryKey="true"/>
+          <column name="city"/>
+          <column name="country_id"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="country">
+        <columns>
+          <column name="country_id" primaryKey="true"/>
+          <column name="country"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="customer">
+        <columns>
+          <column name="customer_id" primaryKey="true"/>
+          <column name="store_id"/>
+          <column name="first_name"/>
+          <column name="last_name"/>
+          <column name="email"/>
+          <column name="address_id"/>
+          <column name="active"/>
+          <column name="create_date"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="film">
+        <columns>
+          <column name="film_id" primaryKey="true"/>
+          <column name="title"/>
+          <column name="description"/>
+          <column name="release_year"/>
+          <column name="language_id"/>
+          <column name="original_language_id"/>
+          <column name="rental_duration"/>
+          <column name="rental_rate"/>
+          <column name="length"/>
+          <column name="replacement_cost"/>
+          <column name="rating"/>
+          <column name="special_features"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="film_actor">
+        <columns>
+          <column name="actor_id" primaryKey="true"/>
+          <column name="film_id" primaryKey="true"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="film_category">
+        <columns>
+          <column name="film_id" primaryKey="true"/>
+          <column name="category_id" primaryKey="true"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="film_text">
+        <columns>
+          <column name="film_id" primaryKey="true"/>
+          <column name="title"/>
+          <column name="description"/>
+        </columns>
+      </table>
+      <table name="inventory">
+        <columns>
+          <column name="inventory_id" primaryKey="true"/>
+          <column name="film_id"/>
+          <column name="store_id"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="language">
+        <columns>
+          <column name="language_id" primaryKey="true"/>
+          <column name="name"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="payment">
+        <columns>
+          <column name="payment_id" primaryKey="true"/>
+          <column name="customer_id"/>
+          <column name="staff_id"/>
+          <column name="rental_id"/>
+          <column name="amount"/>
+          <column name="payment_date"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="rental">
+        <columns>
+          <column name="rental_id" primaryKey="true"/>
+          <column name="rental_date"/>
+          <column name="inventory_id"/>
+          <column name="customer_id"/>
+          <column name="return_date"/>
+          <column name="staff_id"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="staff">
+        <columns>
+          <column name="staff_id" primaryKey="true"/>
+          <column name="first_name"/>
+          <column name="last_name"/>
+          <column name="address_id"/>
+          <column name="picture"/>
+          <column name="email"/>
+          <column name="store_id"/>
+          <column name="active"/>
+          <column name="username"/>
+          <column name="password"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+      <table name="store">
+        <columns>
+          <column name="store_id" primaryKey="true"/>
+          <column name="manager_staff_id"/>
+          <column name="address_id"/>
+          <column name="last_update"/>
+        </columns>
+      </table>
+    </tables>
+  </DatabaseXMLBean>
